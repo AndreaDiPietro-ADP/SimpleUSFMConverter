@@ -160,35 +160,6 @@ abstract class SimpleUSFMConverter {
         
     ];
     
-    /**
-     * 
-     * @param string $_text
-     * @param string $pattern
-     * @param string $replacement
-     * @param string $pattern_closure
-     * @param string $html_tag_close
-     * @return string|null
-     */
-    protected static function fromUsfmToHtmlDoReplace( $_text, $pattern, $replacement, $pattern_closure, $html_tag_close ):?string {
-        $return = $_text;
-        if( !empty( $_text ) ):
-            $row_temp = preg_replace( $pattern, $replacement, $_text);
-            if( null !== $row_temp ):
-                if( !empty( $pattern_closure ) && null !== $html_tag_close ):
-                    $count = 0;
-                    $row_temp_closed = preg_replace( $pattern_closure, $html_tag_close, $row_temp, 1, $count);
-                    if( null !== $row_temp_closed && $count>0 ):
-                        $row_temp = $row_temp_closed;
-                    else:
-                        $row_temp = "{$row_temp_closed}$html_tag_close";
-                    endif;
-                endif;
-                $return = $row_temp;
-            endif;
-        endif;
-        return $return;
-    }
-    
     protected static function fromUsfmAddMissingExplicitClosure( $_text ):?string {
         $return = $_text;
         if( !empty( $_text ) ):
@@ -335,9 +306,9 @@ abstract class SimpleUSFMConverter {
                                             if( 2 === count( $colspan_range_splitted ) ):
                                                 $colspan_value = intval( $colspan_range_splitted[1] ) - intval( $colspan_range_splitted[0] ) + 1;
                                             endif;
-                                            $replacement_colspan_patterns[]  = '/' . preg_quote( $match_full_pattern ) . '/m';
+                                            $replacement_colspan_patterns[]  = '/\\s{1}' . preg_quote( $match_full_pattern ) . '/m';
                                             if( 2 <= $colspan_value ):
-                                                $replacement_colspan_values[]    = "{$match_full_pattern} colspan=\"{$colspan_value}\"";
+                                                $replacement_colspan_values[]    = " {$match_full_pattern} colspan=\"{$colspan_value}\"";
                                             else:
                                                 $replacement_colspan_values[]    = "";
                                             endif;
@@ -431,7 +402,7 @@ abstract class SimpleUSFMConverter {
                         $replacement         = "{$tag_openers}$3{$tag_closures}";
 
 
-                        $row_temp = self::fromUsfmToHtmlDoReplace( $val, $initial_marker_pattern, $replacement, null, $tag_closures );
+                        $row_temp = preg_replace( $initial_marker_pattern, $replacement, $val);
                         if( null !== $row_temp ):
                             $to_add = $row_temp;
                         endif;
