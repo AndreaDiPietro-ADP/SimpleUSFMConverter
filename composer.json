@@ -1,0 +1,20 @@
+{
+    "name": "yggdrashill/simple-usfm-converter",
+    "description": "A simple text converter from USFM to HTML",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Andrea Di Pietro",
+            "email": "yggdrashill.adp@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "YggdrasHill\\SimpleUSFMConverter\\": "src/YggdrasHill/SimpleUSFMConverter/"
+        }
+    }
+}

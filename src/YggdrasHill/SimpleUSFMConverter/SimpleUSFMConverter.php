@@ -1,5 +1,7 @@
 <?php
 
+namespace YggdrasHill\SimpleUSFMConverter;
+
 /**
  * Description of SimpleUSFMConverter
  *
