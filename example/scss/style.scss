@@ -1,0 +1,239 @@
+$indent_left_level_1: 30px;
+$indent_left_level_2: 60px;
+$indent_left_level_3: 90px;
+
+/* introductions */
+.usfm.s,
+.usfm.is {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.usfm.is {
+    margin-top: 0;
+    display: block;
+}
+
+.usfm.is2 {
+    margin-top: 20px;
+}
+
+.usfm.imt{
+    display: block;
+}
+
+.usfm.io{
+    display: list-item;
+    list-style-type: none;
+}
+
+.usfm_introductions.io2 {
+    margin-left: $indent_left_level_1;
+}
+
+.usfm.ib{
+    display: block;
+}
+.usfm.ib:after{
+    content: " ";
+    white-space: pre;
+}
+.usfm.ip{
+    display: block;
+}
+
+.usfm.iot{
+    margin-top: 20px;
+    display: block;
+    font-weight: bold;
+}
+
+/* introductions */
+
+/* titlesheadingsandlabel */
+.usfm.mt{
+    font-size: 36pt;
+}
+.usfm.section_reference_range,
+.usfm.sr{
+    display: block;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.usfm.s2 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.usfm.ms {
+    display: block;
+    text-transform: uppercase;
+}
+.usfm.ms1 { 
+    text-transform: uppercase; 
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.usfm.r{
+    display: block;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+/* titlesheadingsandlabel */
+
+/* poetry */
+.usfm.q{
+    display: block;
+}
+.usfm.q1{
+    margin-left: $indent_left_level_1;
+}
+.usfm.q2{
+    margin-left: $indent_left_level_2;
+}
+.usfm.q3{
+    margin-left: $indent_left_level_3;
+}
+
+.usfm.qa{
+    font-style: italic;
+    display: block;
+    min-width: 55px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 1rem;
+}
+/* poetry */
+
+/* titlesheadingsandlabel */
+.usfm.s {
+    margin-top: 10px;
+    display: block;
+}
+/* titlesheadingsandlabel */
+
+/* wordsandcharacters */
+.usfm.bk{
+    font-style: italic;
+}
+
+.usfm.qt{
+    font-style: oblique;
+}
+
+.usfm.add{
+    font-style: oblique;
+    font-weight: lighter;
+}
+
+.usfm.sig{
+    font-style: italic;
+}
+
+.usfm.sls{
+    font-style: oblique;
+    font-weight: lighter;
+}
+
+.usfm.tl{
+    font-style: italic;
+}
+/* wordsandcharacters */
+
+/* characterstyling */
+.usfm.no {
+    font-style:normal;
+}
+/* characterstyling */
+
+/* paragraphs */
+.usfm.pb{
+    margin-bottom: 60px;
+}
+.usfm.pb:after{
+    content: " ";
+    white-space: pre;
+}
+
+.usfm.b{
+    display: block;
+}
+.usfm.b:after{
+    content: " ";
+    white-space: pre;
+}
+
+.usfm.p{
+    display: block;
+}
+
+.usfm.m{
+    display: block;
+}
+
+.usfm.mi{
+    display: block;
+    margin-left: $indent_left_level_1;
+}
+/* paragraphs */
+
+/* crossreferences */
+.usfm.xop,
+.usfm.xo{
+    font-weight: 600;
+}
+.usfm.xta{
+    font-weight: 600;
+}
+/* crossreferences */
+
+/* footnotes */
+.usfm.fr{
+    font-weight: bold;
+}
+.usfm.fq{
+    font-style: italic;
+}
+.usfm.fk{
+    font-style: normal;
+    font-weight: lighter;
+}
+.usfm.fqa{
+    font-style: italic;
+}
+.usfm.fv{
+    font-weight: bold;
+}
+/* footnotes */
+
+/* specialfeatures */
+.usfm.fig{
+    display: none;
+}
+/* specialfeatures */
+
+/* tables */
+div.usfm.usfm_tables {
+    margin: $indent_left_level_1;
+}
+.usfm.tables { 
+    width: 100%;
+}
+.usfm.tr { }
+
+.usfm.th,
+.usfm.thr { 
+    font-style: italic;
+}
+.usfm.thr {
+    text-align: right
+}
+
+.usfm.tc { }
+.usfm.tcr { 
+    text-align: right
+}
+/* tables */
