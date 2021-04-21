@@ -34,6 +34,7 @@ abstract class SimpleUSFMConverter {
         'fdc'        => [ 'tag' => 'span', 'class' => 'footnotes',                  'numbered'=>false, 'implicit_closure'=>null, ],
         'fm'         => [ 'tag' => 'span', 'class' => 'footnotes',                  'numbered'=>false, 'implicit_closure'=>null, ],
         'em'        => [ 'tag' => 'em', 'class' => 'characterstyling',             'numbered'=>false, 'implicit_closure'=>null, ],
+        '+em'       => [ 'tag' => 'em', 'class' => 'characterstyling',             'numbered'=>false, 'implicit_closure'=>null, ],
         'bd'        => [ 'tag' => 'b', 'class' => 'characterstyling',              'numbered'=>false, 'implicit_closure'=>null, ],
         '+bd'       => [ 'tag' => 'b', 'class' => 'characterstyling',              'numbered'=>false, 'implicit_closure'=>null, ],
         'it'        => [ 'tag' => 'i', 'class' => 'characterstyling',              'numbered'=>false, 'implicit_closure'=>null, ],
@@ -55,6 +56,7 @@ abstract class SimpleUSFMConverter {
         'sig'       => [ 'tag' => 'span', 'class' => 'wordsandcharacters',          'numbered'=>false, 'implicit_closure'=>null, ],
         'sls'       => [ 'tag' => 'span', 'class' => 'wordsandcharacters',          'numbered'=>false, 'implicit_closure'=>null, ],
         'tl'        => [ 'tag' => 'span', 'class' => 'wordsandcharacters',          'numbered'=>false, 'implicit_closure'=>null, ],
+        '+tl'       => [ 'tag' => 'span', 'class' => 'wordsandcharacters',          'numbered'=>false, 'implicit_closure'=>null, ],
         'wj'        => [ 'tag' => 'span', 'class' => 'wordsandcharacters',          'numbered'=>false, 'implicit_closure'=>null, ],
         'ndx'       => [ 'tag' => 'span', 'class' => 'wordsandcharacters',          'numbered'=>false, 'implicit_closure'=>null, ],
         //'rb' https://ubsicap.github.io/usfm/characters/index.html#rb-rb ruby ruby characters... not today
