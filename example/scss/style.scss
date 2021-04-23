@@ -149,6 +149,54 @@ $indent_left_level_3: 90px;
 }
 /* characterstyling */
 
+/* lists */
+.usfm.lh{}
+.usfm.lh + .usfm.v{
+    display: block;
+    margin-left: $indent_left_level_1/2;
+    margin-bottom: $indent_left_level_1/2;
+}
+
+
+.usfm.li{
+    display: list-item;
+    list-style-type: none;
+    margin-left: $indent_left_level_1;
+}
+
+.usfm.lf{
+    margin-top: $indent_left_level_1/2;
+    display: inline-block;
+}
+
+.usfm.lim{}
+.usfm.lim + .usfm.v{
+    margin-left: $indent_left_level_1/2;
+    display:block;
+}
+
+.usfm.lik,
+.usfm.liv{
+  display: table-cell;
+  padding-right: $indent_left_level_1/2;
+}
+
+.usfm.litl{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+@-moz-document url-prefix() {
+    .usfm.litl{
+        display: block;
+        float: inline-end;
+        right: unset;
+        position: unset;
+    }
+}
+
+/* lists */
+
 /* paragraphs */
 .usfm.pb{
     margin-bottom: 60px;
@@ -178,6 +226,12 @@ $indent_left_level_3: 90px;
     display: block;
     margin-left: $indent_left_level_1;
 }
+
+.usfm.pm,
+.usfm.pm + .usfm.v{
+  margin-left: $indent_left_level_1/2;
+}
+
 /* paragraphs */
 
 /* crossreferences */
