@@ -413,18 +413,20 @@ abstract class SimpleUSFMConverter {
                     endif;
                 endif;
 
-                if( $table_to_close && ( 'tr' !== $nl_marker  || $key === array_key_last( $text_list ) ) ):
-                    $marker_detail_tr = self::NL_MARKER_LIST[ 'tr' ];
-                    $table_to_close = false;
-                    if( 'tr' !== $nl_marker ):
-                        $to_add = "</{$marker_detail_tr["tag_table"]}></{$marker_detail_tr["tag_table_container"]}>{$to_add}";
-                    else:
-                        $to_add = "$to_add</{$marker_detail_tr["tag_table"]}></{$marker_detail_tr["tag_table_container"]}>";
+                if( isset( $nl_marker ) && null !== $nl_marker ):
+                    if( $table_to_close && ( 'tr' !== $nl_marker  || $key === array_key_last( $text_list ) ) ):
+                        $marker_detail_tr = self::NL_MARKER_LIST[ 'tr' ];
+                        $table_to_close = false;
+                        if( 'tr' !== $nl_marker ):
+                            $to_add = "</{$marker_detail_tr["tag_table"]}></{$marker_detail_tr["tag_table_container"]}>{$to_add}";
+                        else:
+                            $to_add = "$to_add</{$marker_detail_tr["tag_table"]}></{$marker_detail_tr["tag_table_container"]}>";
+                        endif;
+                    elseif( !$table_to_close && 'tr' === $nl_marker ):
+                        $marker_detail_tr = self::NL_MARKER_LIST[ 'tr' ];
+                        $table_to_close = true;
+                        $to_add = "<{$marker_detail_tr["tag_table_container"]} class=\"{$marker_detail_tr["tag_table_container_css"]}\"><{$marker_detail_tr["tag_table"]} class=\"{$marker_detail_tr["tag_table_css"]}\">{$to_add}";
                     endif;
-                elseif( !$table_to_close && 'tr' === $nl_marker ):
-                    $marker_detail_tr = self::NL_MARKER_LIST[ 'tr' ];
-                    $table_to_close = true;
-                    $to_add = "<{$marker_detail_tr["tag_table_container"]} class=\"{$marker_detail_tr["tag_table_container_css"]}\"><{$marker_detail_tr["tag_table"]} class=\"{$marker_detail_tr["tag_table_css"]}\">{$to_add}";
                 endif;
 
                 $text_list_temp[ $key ] = $to_add;
