@@ -291,3 +291,16 @@ div.usfm.usfm_tables {
     text-align: right
 }
 /* tables */
+
+/* chaptersandverses */
+.usfm.ca{
+    font-size: .87em;
+    /* vertical-align: sub; */
+}
+.usfm.ca::before{
+    content: "(";
+}
+.usfm.ca::after{
+    content: ")";
+}
+/* chaptersandverses */
