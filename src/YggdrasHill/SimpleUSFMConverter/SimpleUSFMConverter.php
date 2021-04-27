@@ -12,7 +12,7 @@ abstract class SimpleUSFMConverter {
         'ior'       => [ 'tag' => 'span', 'class' => 'introductions',              'numbered'=>false, 'implicit_closure'=>null, ],
         'iqt'       => [ 'tag' => 'span', 'class' => 'introductions',              'numbered'=>false, 'implicit_closure'=>null, ],
         'rq'        => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',     'numbered'=>false, 'implicit_closure'=>null, ],
-        'ca'        => [ 'tag' => 'span', 'class' => 'chaptersandverses',          'numbered'=>false, 'implicit_closure'=>null, ],
+        'ca'        => [ 'tag' => 'div', 'class' => 'chaptersandverses',          'numbered'=>false, 'implicit_closure'=>null, ],
         'va'        => [ 'tag' => 'span', 'class' => 'chaptersandverses',          'numbered'=>false, 'implicit_closure'=>null, ],
         'vp'        => [ 'tag' => 'span', 'class' => 'chaptersandverses',          'numbered'=>false, 'implicit_closure'=>null, ],
         'qs'        => [ 'tag' => 'span', 'class' => 'poetry',                     'numbered'=>false, 'implicit_closure'=>null, ],
@@ -91,74 +91,75 @@ abstract class SimpleUSFMConverter {
     ];
     
     CONST NL_MARKER_LIST = [
-        'ip'        => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'pi'        => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'im'        => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'imi'       => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'ipq'       => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'imq'       => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'ipr'       => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'ib'        => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'iot'       => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'iex'       => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'ie'        => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'imt'       => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
-        'is'        => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
-        'iq'        => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
-        'ili'       => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
-        'io'        => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
-        'imte'      => [ 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
+        'id'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'identification',           'numbered'=>false, ],
+        'ip'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'pi'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'im'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'imi'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'ipq'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'imq'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'ipr'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'ib'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'iot'       => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'introductions',            'numbered'=>false, ],
+        'iex'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'ie'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'imt'       => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'introductions',            'numbered'=>true, ],
+        'is'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'introductions',            'numbered'=>true, ],
+        'iq'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
+        'ili'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
+        'io'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
+        'imte'      => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
         
         
-        'mr'        => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
-        'sr'        => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
-        'r'         => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
-        'd'         => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
-        'sp'        => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
-        'mt'        => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
-        'mte'       => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
-        'ms'        => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
-        's'         => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
-        'sd'        => [ 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
+        'mr'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
+        'sr'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
+        'r'         => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
+        'd'         => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
+        'sp'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
+        'mt'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
+        'mte'       => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
+        'ms'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
+        's'         => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
+        'sd'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
         
-        'c'         => [ 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, ],
-        'cl'        => [ 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, ],
-        'cp'        => [ 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, ],
-        'cd'        => [ 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, ],
-        'v'         => [ 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, 'verse_number_tag' => 'sup', 'verse_number_class' => 'usfm usfm_chaptersandverses verse_number' , ],
+        'c'         => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'chaptersandverses',        'numbered'=>false, ],
+        'cl'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, ],
+        'cp'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, ],
+        'cd'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, ],
+        'v'         => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'chaptersandverses',        'numbered'=>false, 'verse_number_tag' => 'sup', 'verse_number_class' => 'usfm usfm_chaptersandverses verse_number' , ],
         
-        'p'         => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'm'         => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'po'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'pr'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'cls'       => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'pmo'       => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'pm'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'pmc'       => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'pmr'       => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'mi'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'nb'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'pc'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'b'         => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'pi'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>true, ],
-        'ph'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>true, ],
-        'pb'        => [ 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ], //Explicit page break.
+        'p'         => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'm'         => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'po'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'pr'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'cls'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'pmo'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'pm'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'pmc'       => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'pmr'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'mi'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'nb'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'pc'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'b'         => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'pi'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>true, ],
+        'ph'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>true, ],
+        'pb'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ], //Explicit page break.
         
-        'qr'        => [ 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
-        'qc'        => [ 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
-        'qa'        => [ 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
-        'qd'        => [ 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
-        'q'         => [ 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>true, ],
-        'qm'        => [ 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>true, ],
+        'qr'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
+        'qc'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
+        'qa'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'poetry',                   'numbered'=>false, ],
+        'qd'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
+        'q'         => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>true, ],
+        'qm'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>true, ],
         
-        'lh'        => [ 'tag' => 'span', 'class' => 'lists',                   'numbered'=>false, ],
-        'lf'        => [ 'tag' => 'span', 'class' => 'lists',                   'numbered'=>false, ],
-        'li'        => [ 'tag' => 'span', 'class' => 'lists',                   'numbered'=>true, ],
-        'lim'       => [ 'tag' => 'span', 'class' => 'lists',                   'numbered'=>true, ],
+        'lh'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'lists',                   'numbered'=>false, ],
+        'lf'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'lists',                   'numbered'=>false, ],
+        'li'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'lists',                   'numbered'=>true, ],
+        'lim'       => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'lists',                   'numbered'=>true, ],
         
-        'tr'        => [ 'tag' => 'tr', 'class' => 'tables',                    'numbered'=>false, 'tag_table_container' => 'div', 'tag_table_container_css' => 'usfm usfm_tables', 'tag_table' => 'table', 'tag_table_css' => 'usfm usfm_tables tables', ], // example: Numeri 1,20-43, Nm 4,34-49
+        'tr'        => [ 'pre-pend_br' => false, 'tag' => 'tr', 'class' => 'tables',                    'numbered'=>false, 'tag_table_container' => 'div', 'tag_table_container_css' => 'usfm usfm_tables', 'tag_table' => 'table', 'tag_table_css' => 'usfm usfm_tables tables', ], // example: Numeri 1,20-43, Nm 4,34-49
         
-        'lit'        => [ 'tag' => 'span', 'class' => 'wordsandcharacters',     'numbered'=>false, ],
+        'lit'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'wordsandcharacters',     'numbered'=>false, ],
         
     ];
     
@@ -367,10 +368,15 @@ abstract class SimpleUSFMConverter {
                     $nl_marker           = $matches[ 1 ];
                     $nl_marker_number    = $matches[ 2 ];
                     $nl_marker_text      = $matches[ 3 ];
-
+                    
                     if( !empty( $nl_marker ) && key_exists( $nl_marker, self::NL_MARKER_LIST ) ):
 
-                        $marker_detail = self::NL_MARKER_LIST[ $nl_marker ];
+                        $marker_detail              = self::NL_MARKER_LIST[ $nl_marker ];
+                        $marker_detail_preprend_br  = $marker_detail['pre-pend_br'];
+                        $prepend_html               = "";
+                        if( $marker_detail_preprend_br ):
+                            $prepend_html = "{$prepend_html}<br>";
+                        endif;
                     
                         if( 'v' === $nl_marker ):
                             $verse_number_html = "<{$marker_detail[ "verse_number_tag" ]} class=\"{$marker_detail[ "verse_number_class" ]}\">$2</{$marker_detail[ "verse_number_tag" ]}>";
@@ -390,7 +396,7 @@ abstract class SimpleUSFMConverter {
 
                         $tag_openers  = "";
                         $tag_closures = "";
-                        $tag_class    = "usfm usfm_" . $marker_detail[ 'class' ] . " $1" . ( ( $nl_marker_number ) ? " $1$2" : "" );
+                        $tag_class    = "usfm usfm_" . $marker_detail[ 'class' ] . " $1" . ( ( $nl_marker_number ) ? " $1$2" : "" ) . ( empty( $nl_marker_text)?" empty_tag":"" );
                         if( !is_array( $marker_detail[ 'tag' ] ) ):
                             $tag_openers  = "<{$marker_detail[ 'tag' ]} class=\"{$tag_class}\">";
                             $tag_closures = "</{$marker_detail[ 'tag' ]}>";
@@ -401,7 +407,7 @@ abstract class SimpleUSFMConverter {
                             endforeach;
                         endif;
 
-                        $replacement         = "{$tag_openers}$3{$tag_closures}";
+                        $replacement         = "{$prepend_html}{$tag_openers}$3{$tag_closures}";
 
 
                         $row_temp = preg_replace( $initial_marker_pattern, $replacement, $val);

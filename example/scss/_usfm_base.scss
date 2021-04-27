@@ -2,24 +2,53 @@ $indent_left_level_1: 30px;
 $indent_left_level_2: 60px;
 $indent_left_level_3: 90px;
 
+/* identification */
+.usfm.id{
+    display: none;
+}
+/* identification */
+
+/* chaptersandverses */
+.usfm.c,
+.usfm.cp {
+    font-size: 3.4em;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+}
+
+.usfm.ca{
+    font-size: 3.1rem;
+    float: left;
+}
+.usfm.c .usfm.ca{
+    display: inline;
+    float: unset;
+}
+.usfm.ca::before{
+    content: "(";
+}
+.usfm.ca::after{
+    content: ")";
+}
+
+.usfm.verse_number {
+    margin-right: 5px;
+}
+/* chaptersandverses */
+
 /* introductions */
 .usfm.s,
 .usfm.is {
     font-weight: bold;
-    font-size: 22px;
 }
 
 .usfm.is {
     margin-top: 0;
-    display: block;
-}
-
-.usfm.is2 {
-    margin-top: 20px;
 }
 
 .usfm.imt{
-    display: block;
+    font-size: 2.0em;
 }
 
 .usfm.io{
@@ -38,60 +67,54 @@ $indent_left_level_3: 90px;
     content: " ";
     white-space: pre;
 }
-.usfm.ip{
-    display: block;
-}
+.usfm.ip {}
 
 .usfm.iot{
     margin-top: 20px;
-    display: block;
     font-weight: bold;
 }
 
 /* introductions */
 
 /* titlesheadingsandlabel */
-.usfm.mt{
-    font-size: 36pt;
-}
-.usfm.section_reference_range,
-.usfm.sr{
-    display: block;
-    font-size: 0.8em;
-    font-style: italic;
+.usfm.mt,
+.usfm.mte {
+    font-size: 2.7em;
 }
 
-.usfm.s2 {
-    font-weight: 600;
-    font-size: 20px;
+.usfm.sr {
+    font-size: 0.8em;
+    font-style: italic;
 }
 
 .usfm.ms {
-    display: block;
     text-transform: uppercase;
-}
-.usfm.ms1 { 
-    text-transform: uppercase; 
-    font-size: 27px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
+.usfm.s {}
+
 .usfm.r{
-    display: block;
     font-size: 0.8em;
     font-style: italic;
 }
 
-.usfm.d{
+.usfm.d {}
+
+.usfm.sp { 
     font-style: italic;
+}
+
+.usfm.sd { 
+    white-space: pre;
+    height: 40px;
 }
 
 /* titlesheadingsandlabel */
 
 /* poetry */
-.usfm.q{
-    display: block;
-}
+.usfm.q{}
+
 .usfm.q1{
     margin-left: $indent_left_level_1;
 }
@@ -104,18 +127,15 @@ $indent_left_level_3: 90px;
 
 .usfm.qa{
     font-style: italic;
-    display: block;
-    min-width: 55px;
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-top: 1rem;
+    text-align: center;
 }
 /* poetry */
 
 /* titlesheadingsandlabel */
 .usfm.s {
     margin-top: 10px;
-    display: block;
 }
 /* titlesheadingsandlabel */
 
@@ -154,29 +174,28 @@ $indent_left_level_3: 90px;
 /* characterstyling */
 
 /* lists */
-.usfm.lh{}
-.usfm.lh + .usfm.v{
-    display: block;
+.usfm.lh{
     margin-left: $indent_left_level_1/2;
-    margin-bottom: $indent_left_level_1/2;
+}
+.usfm.lh + .usfm.v::after{
+    display: block;
+    white-space: "pre-line";
+    padding-bottom: 15px;
+    content: "";
 }
 
 
 .usfm.li{
-    display: list-item;
-    list-style-type: none;
     margin-left: $indent_left_level_1;
 }
 
 .usfm.lf{
     margin-top: $indent_left_level_1/2;
-    display: inline-block;
+    display: block;
 }
 
-.usfm.lim{}
-.usfm.lim + .usfm.v{
+.usfm.lim{
     margin-left: $indent_left_level_1/2;
-    display:block;
 }
 
 .usfm.lik,
@@ -202,10 +221,14 @@ $indent_left_level_3: 90px;
 /* lists */
 
 /* paragraphs */
+.usfm.p{
+    margin-left: $indent_left_level_1;
+}
+
 .usfm.pb{
     margin-bottom: 60px;
 }
-.usfm.pb:after{
+.usfm.pb::after{
     content: " ";
     white-space: pre;
 }
@@ -213,26 +236,25 @@ $indent_left_level_3: 90px;
 .usfm.b{
     display: block;
 }
-.usfm.b:after{
+.usfm.b::after{
     content: " ";
     white-space: pre;
 }
 
-.usfm.p{
-    display: block;
-}
+.usfm.m{}
 
-.usfm.m{
-    display: block;
-}
-
-.usfm.mi{
-    display: block;
+.usfm.mi {
     margin-left: $indent_left_level_1;
+    margin-right: $indent_left_level_1;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
-.usfm.pm,
-.usfm.pm + .usfm.v{
+.usfm.pm {
+  margin-left: $indent_left_level_1/2;
+}
+
+.usfm.pmc {
   margin-left: $indent_left_level_1/2;
 }
 
@@ -265,6 +287,10 @@ $indent_left_level_3: 90px;
 .usfm.fv{
     font-weight: bold;
 }
+.usfm.fm{
+    vertical-align: super;
+    font-size: .7em;
+}
 /* footnotes */
 
 /* specialfeatures */
@@ -295,16 +321,3 @@ div.usfm.usfm_tables {
     text-align: right
 }
 /* tables */
-
-/* chaptersandverses */
-.usfm.ca{
-    font-size: .87em;
-    /* vertical-align: sub; */
-}
-.usfm.ca::before{
-    content: "(";
-}
-.usfm.ca::after{
-    content: ")";
-}
-/* chaptersandverses */
