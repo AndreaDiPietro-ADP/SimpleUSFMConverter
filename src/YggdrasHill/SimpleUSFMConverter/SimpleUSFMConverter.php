@@ -114,7 +114,7 @@ abstract class SimpleUSFMConverter {
         'mr'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
         'sr'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
         'r'         => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
-        'd'         => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
+        'd'         => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
         'sp'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
         'mt'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
         'mte'       => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'titlesheadingsandlabel',   'numbered'=>true, ],
@@ -375,7 +375,7 @@ abstract class SimpleUSFMConverter {
                         $marker_detail_preprend_br  = $marker_detail['pre-pend_br'];
                         $prepend_html               = "";
                         if( $marker_detail_preprend_br ):
-                            $prepend_html = "{$prepend_html}<br>";
+                            $prepend_html = "{$prepend_html}<br class=\"usfm br_start_paragraphs\">";
                         endif;
                     
                         if( 'v' === $nl_marker ):

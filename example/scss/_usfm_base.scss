@@ -2,6 +2,11 @@ $indent_left_level_1: 30px;
 $indent_left_level_2: 60px;
 $indent_left_level_3: 90px;
 
+$margin_top_level_1: 15px;
+$padding_top_level_1: 15px;
+$padding_bottom_level_1: 15px;
+$padding_right_level_1: 15px;
+
 /* identification */
 .usfm.id{
     display: none;
@@ -70,7 +75,7 @@ $indent_left_level_3: 90px;
 .usfm.ip {}
 
 .usfm.iot{
-    margin-top: 20px;
+    margin-top: calc( $margin_top_level_1 + 5px );
     font-weight: bold;
 }
 
@@ -92,17 +97,38 @@ $indent_left_level_3: 90px;
     font-weight: bold;
 }
 
-.usfm.s {}
+.usfm.s {
+    margin-top: $margin_top_level_1;
+}
+.usfm.s + .usfm.br_start_paragraphs {
+    display: none;
+}
 
 .usfm.r{
     font-size: 0.8em;
     font-style: italic;
 }
 
-.usfm.d {}
+.usfm.d {
+    display: block;
+    font-style: italic;
+}
+.usfm.d.empty_tag {
+    display: inline;
+}
+
+.usfm.d.empty_tag + .usfm.v {
+    font-style: italic;
+}
 
 .usfm.sp { 
     font-style: italic;
+    margin-top: $margin_top_level_1;
+    font-weight: 300;
+}
+
+.usfm.sp + .usfm.br_start_paragraphs {
+    display: none;
 }
 
 .usfm.sd { 
@@ -132,12 +158,6 @@ $indent_left_level_3: 90px;
     text-align: center;
 }
 /* poetry */
-
-/* titlesheadingsandlabel */
-.usfm.s {
-    margin-top: 10px;
-}
-/* titlesheadingsandlabel */
 
 /* wordsandcharacters */
 .usfm.bk{
@@ -180,7 +200,7 @@ $indent_left_level_3: 90px;
 .usfm.lh + .usfm.v::after{
     display: block;
     white-space: "pre-line";
-    padding-bottom: 15px;
+    padding-bottom: $padding_bottom_level_1;
     content: "";
 }
 
@@ -190,7 +210,7 @@ $indent_left_level_3: 90px;
 }
 
 .usfm.lf{
-    margin-top: $indent_left_level_1/2;
+    margin-top: $margin_top_level_1;
     display: block;
 }
 
@@ -201,7 +221,7 @@ $indent_left_level_3: 90px;
 .usfm.lik,
 .usfm.liv{
   display: table-cell;
-  padding-right: $indent_left_level_1/2;
+  padding-right: $padding_right_level_1;
 }
 
 .usfm.litl{
