@@ -106,7 +106,7 @@ abstract class SimpleUSFMConverter {
         'imt'       => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'introductions',            'numbered'=>true, ],
         'is'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'introductions',            'numbered'=>true, ],
         'iq'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
-        'ili'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
+        'ili'       => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
         'io'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
         'imte'      => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
         'zir'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
