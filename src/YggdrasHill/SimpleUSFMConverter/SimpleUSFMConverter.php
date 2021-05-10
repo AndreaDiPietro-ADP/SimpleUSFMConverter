@@ -94,7 +94,7 @@ abstract class SimpleUSFMConverter {
         'id'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'identification',           'numbered'=>false, ],
         'ip'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
         'pi'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'im'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'im'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
         'imi'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
         'ipq'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
         'imq'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
@@ -109,6 +109,7 @@ abstract class SimpleUSFMConverter {
         'ili'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
         'io'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
         'imte'      => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
+        'zir'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>true, ],
         
         
         'mr'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'titlesheadingsandlabel',   'numbered'=>false, ],
