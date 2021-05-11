@@ -51,6 +51,9 @@ $padding_right_level_1: 15px;
 .usfm.is {
     margin-top: 0;
 }
+.usfm.is + .usfm.br_start_paragraphs {
+    display: none;
+}
 
 .usfm.imt{
     font-size: 2.0em;
@@ -110,11 +113,9 @@ $padding_right_level_1: 15px;
 .usfm.s {
     margin-top: $margin_top_level_1;
 }
-/* no more display block on br_start_paragraphs
 .usfm.s + .usfm.br_start_paragraphs {
     display: none;
 }
-*/
 
 .usfm.r{
     font-size: 0.8em;
@@ -138,11 +139,9 @@ $padding_right_level_1: 15px;
     margin-top: $margin_top_level_1;
     font-weight: 300;
 }
-/* no more display block on br_start_paragraphs
 .usfm.sp + .usfm.br_start_paragraphs {
     display: none;
 }
-*/
 
 .usfm.sd { 
     white-space: pre;
