@@ -65,13 +65,13 @@ $padding_right_level_1: 15px;
     margin-left: $indent_left_level_1;
 }
 
-.usfm.ib{
+/*.usfm.ib{
     display: block;
 }
 .usfm.ib:after{
     content: " ";
     white-space: pre;
-}
+}*/
 .usfm.ip{
     margin-left: $indent_left_level_1;
 }
@@ -80,10 +80,11 @@ $padding_right_level_1: 15px;
     margin-top: $margin_top_level_1 +5px;
     font-weight: bold;
 }
+/* no more display block on br_start_paragraphs
 .usfm.iot + .usfm.br_start_paragraphs {
     display: none;
 }
-
+*/
 .usfm.zir {
     font-style: italic;
 }
@@ -109,9 +110,11 @@ $padding_right_level_1: 15px;
 .usfm.s {
     margin-top: $margin_top_level_1;
 }
+/* no more display block on br_start_paragraphs
 .usfm.s + .usfm.br_start_paragraphs {
     display: none;
 }
+*/
 
 .usfm.r{
     font-size: 0.8em;
@@ -135,10 +138,11 @@ $padding_right_level_1: 15px;
     margin-top: $margin_top_level_1;
     font-weight: 300;
 }
-
+/* no more display block on br_start_paragraphs
 .usfm.sp + .usfm.br_start_paragraphs {
     display: none;
 }
+*/
 
 .usfm.sd { 
     white-space: pre;
@@ -218,6 +222,14 @@ $padding_right_level_1: 15px;
     margin-left: $indent_left_level_1;
 }
 
+.usfm.li2{
+    margin-left: $indent_left_level_2;
+}
+
+.usfm.li3{
+    margin-left: $indent_left_level_3;
+}
+
 .usfm.lf{
     margin-top: $margin_top_level_1;
     display: block;
@@ -262,21 +274,25 @@ $padding_right_level_1: 15px;
     white-space: pre;
 }
 
-.usfm.b{
+/*.usfm.b{
     display: block;
 }
 .usfm.b::after{
     content: " ";
     white-space: pre;
-}
+}*/
 
 .usfm.m{}
 
-.usfm.mi {
+.usfm.mi,
+.usfm.mi.empty_tag + .usfm.v{
     margin-left: $indent_left_level_1;
-    margin-right: $indent_left_level_1;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
+}
+
+.usfm.mi.empty_tag {
+    margin-left: 0px;
 }
 
 .usfm.pm {

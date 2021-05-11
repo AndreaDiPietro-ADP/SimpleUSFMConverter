@@ -99,7 +99,7 @@ abstract class SimpleUSFMConverter {
         'ipq'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
         'imq'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
         'ipr'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
-        'ib'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
+        'ib'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
         'iot'       => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'introductions',            'numbered'=>false, ],
         'iex'       => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
         'ie'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'introductions',            'numbered'=>false, ],
@@ -141,7 +141,7 @@ abstract class SimpleUSFMConverter {
         'mi'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
         'nb'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
         'pc'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
-        'b'         => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
+        'b'         => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ],
         'pi'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>true, ],
         'ph'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>true, ],
         'pb'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'paragraphs',               'numbered'=>false, ], //Explicit page break.
