@@ -83,11 +83,10 @@ $padding_right_level_1: 15px;
     margin-top: $margin_top_level_1 +5px;
     font-weight: bold;
 }
-/* no more display block on br_start_paragraphs
 .usfm.iot + .usfm.br_start_paragraphs {
     display: none;
 }
-*/
+
 .usfm.zir {
     font-style: italic;
 }
