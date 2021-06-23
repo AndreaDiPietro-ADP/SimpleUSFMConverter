@@ -148,7 +148,7 @@ abstract class SimpleUSFMConverter {
         
         'qr'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
         'qc'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
-        'qa'        => [ 'pre-pend_br' => false, 'tag' => 'div', 'class' => 'poetry',                   'numbered'=>false, ],
+        'qa'        => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
         'qd'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>false, ],
         'q'         => [ 'pre-pend_br' => true, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>true, ],
         'qm'        => [ 'pre-pend_br' => false, 'tag' => 'span', 'class' => 'poetry',                   'numbered'=>true, ],

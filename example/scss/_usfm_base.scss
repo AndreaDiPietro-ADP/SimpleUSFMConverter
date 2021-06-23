@@ -3,6 +3,7 @@ $indent_left_level_2: 60px;
 $indent_left_level_3: 90px;
 
 $margin_top_level_1: 15px;
+$margin_right_level_1: 15px;
 $padding_top_level_1: 15px;
 $padding_bottom_level_1: 15px;
 $padding_right_level_1: 15px;
@@ -166,7 +167,7 @@ $padding_right_level_1: 15px;
     font-style: italic;
     font-size: 0.9rem;
     opacity: 0.8;
-    text-align: center;
+    margin-right: $margin_right_level_1/2;
 }
 /* poetry */
 
