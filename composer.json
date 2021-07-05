@@ -1,8 +1,9 @@
 {
     "name": "yggdrashill/simple-usfm-converter",
-    "description": "A simple text converter from USFM to HTML",
+    "description": "A simple text converter from USFM to HTML.",
     "type": "library",
     "license": "Apache-2.0",
+    "keywords": ["usfm", "bible", "php", "converter"],
     "authors": [
         {
             "name": "Andrea Di Pietro",
